@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Garden Vendor</title>
+    <style>
+        /* Basic CSS for menu styling */
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            background-color: #1a2b00;
+            overflow: hidden;
+        }
+
+        li {
+            float: left;
+        }
+
+        li a {
+            display: block;
+            color: #e6a768;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        li a:hover {
+            background-color: #ffffff;
+        }
+    </style>
+</head>
+<body>
+
+<ul>
+  <li><a href="#home">Home</a></li>
+  <li><a href="#About">About</a></li>
+  <li><a href="#Shop">Shop</a></li>
+  <li><a href="#Blog">Blog</a></li>
+  <li><a href="#Contact">Contact</a></li>
+</ul>
+
+<div id="home" style="padding:20px;">
+  <h2>The Garden Vendor</h2>
+  <p>Bringing Nature To You</p>
+</div>
+
+<div id="About" style="padding:20px;display:none;">
+    <h2>About</h2>
+    <p>Mother Nature's Gift To Us; To You.</p> 
+    <a href="About.html">Entry 1</a><br>
+</div>
+
+<div id="Shop" style="padding:20px;display:none;">
+    <h2>Shop</h2> 
+</div>
+
+<div id="Blog" style="padding:20px;display:none;">
+    <h2>Blog</h2>
+    <p>Mother Nature's Gift To Us; To You.</p> 
+    <a href="entry_1.html">Entry 1</a><br>
+</div>
+
+<div id="Contact" style="padding:20px;display:none;">
+    <h2>Contact</h2>
+    <p>TheGardenVendor@gmail.com</p> 
+</div>
+
+<script>
+// JavaScript for showing/hiding content based on menu clicks
+document.querySelectorAll('ul li a').forEach(item => {
+    item.addEventListener('click', event => {
+        event.preventDefault();
+        let target = event.target.getAttribute('href').substring(1);
+        document.querySelectorAll('div').forEach(div => {
+            div.style.display = 'none';
+        });
+        document.getElementById(target).style.display = 'block';
+    });
+});
+</script>
+
+</body>
+</html>
