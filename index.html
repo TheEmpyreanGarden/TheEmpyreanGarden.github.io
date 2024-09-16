@@ -62,7 +62,7 @@
 <body>
 
 <ul>
-  <li><a href="#Home">Home</a></li>
+  <li><a href="#home">Home</a></li> <!-- Changed to lowercase to match the div id -->
   <li><a href="#About">About</a></li>
   <li><a href="#Shop">Shop</a></li>
   <li><a href="#Blog">Blog</a></li>
@@ -72,7 +72,7 @@
 <main>
   <div id="home">
       <h2>Home</h2>
-      <h2>Divinely Naturelle</h2>
+      <p>Divinely Naturelle</p>
   </div>
 
   <div id="About" style="display:none;">
@@ -107,6 +107,9 @@ document.querySelectorAll('ul li a').forEach(item => {
         document.getElementById(target).style.display = 'block';
     });
 });
+
+// Ensure the home section is visible by default
+document.getElementById('home').style.display = 'block';
 </script>
 
 </body>
