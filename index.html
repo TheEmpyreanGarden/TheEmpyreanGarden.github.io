@@ -12,18 +12,28 @@
         /* Basic CSS for menu styling */
         body {
             font-family: 'La Belle Aurore', cursive; /* Apply La Belle Aurore font */
+            background-color: #fff5ca; /* Light beige background color */
+            margin: 0;
         }
 
         ul {
             list-style-type: none;
             margin: 0;
             padding: 0;
-            background-color: #101a02;
-            overflow: hidden;
+            background-color: #8b6113;
+            display: flex;
+            justify-content: center;
+            width: 100%;
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 50px;
+            align-items: center;
+            z-index: 1; /* Ensure the menu stays above other elements */
         }
 
         li {
-            float: left;
+            margin: 0 10px;
         }
 
         li a {
@@ -35,8 +45,18 @@
         }
 
         li a:hover {
-            background-color: #ffffff;
+            background-color: #fff5ca;
         }
+
+        main {
+            padding-top: 70px; /* Adds space below the fixed menu */
+            text-align: center;
+        }
+
+        h2 {
+            margin-top: 0;
+        }
+
     </style>
 </head>
 <body>
@@ -49,29 +69,31 @@
   <li><a href="#Contact">Contact</a></li>
 </ul>
 
-<div id="home" style="padding:20px;">
-    <h2>Home</h2>
-    <h2>Divinely Naturelle</h2>
-</div>
+<main>
+  <div id="home">
+      <h2>Home</h2>
+      <h2>Divinely Naturelle</h2>
+  </div>
 
-<div id="About" style="padding:20px;display:none;">
-    <h2>About</h2>
-    <a href="About.html">summarie</a><br>
-</div>
+  <div id="About" style="display:none;">
+      <h2>About</h2>
+      <a href="About.html">summarie</a><br>
+  </div>
 
-<div id="Shop" style="padding:20px;display:none;">
-    <h2>Shop</h2> 
-</div>
+  <div id="Shop" style="display:none;">
+      <h2>Shop</h2> 
+  </div>
 
-<div id="Blog" style="padding:20px;display:none;">
-    <h2>Blog</h2>
-    <a href="note_1.html">note 1</a><br>
-</div>
+  <div id="Blog" style="display:none;">
+      <h2>Blog</h2>
+      <a href="note_1.html">note 1</a><br>
+  </div>
 
-<div id="Contact" style="padding:20px;display:none;">
-    <h2>Contact</h2>
-    <p>(Gmailname)@gmail.com</p> 
-</div>
+  <div id="Contact" style="display:none;">
+      <h2>Contact</h2>
+      <p>(Gmailname)@gmail.com</p> 
+  </div>
+</main>
 
 <script>
 // JavaScript for showing/hiding content based on menu clicks
@@ -79,7 +101,7 @@ document.querySelectorAll('ul li a').forEach(item => {
     item.addEventListener('click', event => {
         event.preventDefault();
         let target = event.target.getAttribute('href').substring(1);
-        document.querySelectorAll('div').forEach(div => {
+        document.querySelectorAll('main div').forEach(div => {
             div.style.display = 'none';
         });
         document.getElementById(target).style.display = 'block';
