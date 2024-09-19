@@ -5,15 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Empyrean Garden</title>
 
-    <!-- Link to Google Fonts for La Belle Aurore -->
-    <link href="https://fonts.googleapis.com/css2?family=La+Belle+Aurore&display=swap" rel="stylesheet">
+    <!-- Link to Google Fonts for Indie Flower -->
+    <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet">
 
     <style>
         /* Basic CSS for menu styling */
         body {
-            font-family: 'La Belle Aurore', cursive; /* Apply La Belle Aurore font */
+            font-family: 'Indie Flower', cursive; /* Apply Indie Flower font */
             background-color: #fff5ca; /* Light beige background color */
             margin: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            background-image: url('C:/Users/Amaya/Downloads/moi/webi/multi colour flowers 1.png'); /* Set the background image */
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: 103%; /* Zoom out the image by 3% */
+            padding: 20px; /* Adds padding to prevent content from touching the edges */
         }
 
         ul {
@@ -45,24 +53,31 @@
         }
 
         li a:hover {
-            background-color: #fff5ca;
+            background-color: #ffffff;
         }
 
         main {
             padding-top: 70px; /* Adds space below the fixed menu */
             text-align: center;
+            flex-grow: 1;
         }
 
         h2 {
             margin-top: 0;
         }
 
+        /* Ensure the content is legible on the background */
+        main div {
+            background-color: rgba(255, 255, 255, 0.8); /* Adds a translucent white background to content */
+            padding: 20px;
+            border-radius: 10px;
+        }
     </style>
 </head>
 <body>
 
 <ul>
-  <li><a href="#home">Home</a></li> <!-- Changed to lowercase to match the div id -->
+  <li><a href="#home">Home</a></li>
   <li><a href="#About">About</a></li>
   <li><a href="#Shop">Shop</a></li>
   <li><a href="#Blog">Blog</a></li>
@@ -72,7 +87,7 @@
 <main>
   <div id="home">
       <h2>Home</h2>
-      <p>Divinely Naturelle</p>
+      <p>Divinely Naturely</p>
   </div>
 
   <div id="About" style="display:none;">
